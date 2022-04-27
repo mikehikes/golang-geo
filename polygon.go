@@ -35,11 +35,7 @@ func (p *Polygon) Add(point *Point) {
 //        this should be sufficient for detecting if points
 //        are contained using the raycast algorithm.
 func (p *Polygon) IsClosed() bool {
-	if len(p.points) < 3 {
-		return false
-	}
-
-	return true
+	return len(p.points) < 3
 }
 
 // Contains returns whether or not the current Polygon contains the passed in Point.
